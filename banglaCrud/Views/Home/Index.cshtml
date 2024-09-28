@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    <form action="/Home/postHouse" method="post">
+        <div class="form-group">
+            <div class="col-sm-4">
+                <label>House Name</label>
+                <input type="text" name="HouseName" class="form-control" placeholder=" Enter house Name" />
+            </div>
+            <div class="col-sm-4">
+                <label>House Price</label>
+                <input type="number" name="price" class="form-control" placeholder="Enter house price" />
+            </div>
+            <div class="col-sm-4">
+                <label>House squere Feet</label>
+                <input type="number" name="sqFeet" class="form-control" placeholder="Enter house sqFeet" />
+            </div>
+            <button style="margin-top:25px" type="submit" class="btn btn-info">Save</button>
+
+        </div>
+    
+    </form>
+</div>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<banglaCrud.Models.House>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h1>House of list</h1>
+<td><a type="button" href="@Url.Action("Index","Home")" class="btn btn-info">Add House</a></td>
+<table class="table">
+    <thead>
+    <th>House  Name</th>
+    <th>House Price</th>
+    <th>House sqFeet</th>
+
+    </thead>
+   
+
+    @if(Model==null || !Model.Any())
+    {
+        <h1>Empty List</h1>
+    }
+    else
+    {
+        foreach(var x in Model)
+        {
+            <tr>
+                <td>@x.HouseName</td>
+                <td>@x.price</td>
+                <td>@x.sqFeet</td>
+                <td><a type="button" href="@Url.Action("editHouse","House",new { id = x.houseId})" class="btn btn-info">EditHouse</a>      </td>
+                <td><a type="button" href="@Url.Action("deleteHouse","House",new { id = x.houseId})" class="btn btn-danger">Delete</a></td>
+            </tr>
+        }
+    }
+</table>
+
+
+

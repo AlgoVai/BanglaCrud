@@ -1,0 +1,28 @@
+﻿@model banglaCrud.Models.House
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<h1>editing house</h1>
+
+<div>
+    <form action="@Url.Action("putHouse","House")" method="post">
+
+        <input type="hidden" name="HouseId" value="@Model.houseId" />
+        <div class="col-sm-4">
+            <label>House Name</label>
+            <input type="text" name="HouseName" value="@Model.HouseName" class="form-control" placeholder=" Enter house Name" />
+        </div>
+        <div class="col-sm-4">
+            <label>House Price</label>
+            <input type="number" name="price" value="@Model.price" class="form-control" placeholder="Enter house Name" />
+        </div>
+        <div class="col-sm-4">
+            <label>House squere Feet</label>
+            <input type="number" name="sqFeet" value="@Model.sqFeet" class="form-control" placeholder="Enter house Name" />
+        </div>
+        <button style ="margin-top:25px"type="submit" class="btn btn-info">Update</button>
+
+
+    </form>
+</div>
